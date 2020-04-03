@@ -11,11 +11,10 @@ export default ({ data }) => {
     <div>
         <Layout>
     <h1>{data.contentstackWebsiteHome.title}</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/">Go back to the homepage</Link>
+    <p>{data.contentstackWebsiteHome.body}</p>
+    <Link to="/">Go back to the index</Link>
   </Layout>
-  {data.contentstackWebsiteHome.body}
+  
     </div>
     
   )
