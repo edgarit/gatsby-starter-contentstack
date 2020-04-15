@@ -8,24 +8,24 @@ const BlogPage = ({ data }) => {
   const blog = data.contentstackBlogs
   return (
     <Layout>
-      <div className="container">
-        <div>
-          <section>
-            <div className="blog-title">
-              <h2>{blog.title}</h2>
-            </div>
-            <div className="blog-description">
-              {renderHTML(blog.description)}
-            </div>
-            <div className="author">
-              By:{' '}
-              {blog.authors.map(author => {
+      <div class="card article">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content has-text-centered">
+                                <p class="title article-title">{blog.title}</p>
+                                <div class="tags has-addons level-item">
+                                    <span class="tag is-rounded is-info">{blog.authors.map(author => {
                 return <span key={author.id}>{author.name}</span>
-              })}
-            </div>
-          </section>
-        </div>
-      </div>
+              })}</span>
+                                    <span class="tag is-rounded">May 10, 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content article-body">
+                            {renderHTML(blog.description)}
+                        </div>
+                    </div>
+                </div>
     </Layout>
   )
 }
